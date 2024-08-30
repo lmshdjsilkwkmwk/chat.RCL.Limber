@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat.RCL-Limber chatea con un robot</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #282c34;
+            margin: 0;
+            color: #fff;
+        }
+        .chat-container {
+            background-color: #1e1e1e;
+            width: 450px;
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+        }
+        .chat-box {
+            height: 500px;
+            overflow-y: auto;
+            border: 1px solid #333;
+            padding: 15px;
+            margin-bottom: 10px;
+            background-color: #282c34;
+            border-radius: 8px;
+        }
+        .user-input {
+            display: flex;
+        }
+        .user-input input {
+            flex: 1;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #555;
+            background-color: #444;
+            color: #fff;
+            margin-right: 10px;
+        }
+        .user-input button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .message {
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+        .message.user {
+            text-align: right;
+            color: #8bc34a;
+            /*background-color: blueviolet;*/
+        }
+        .message.bot {
+            text-align: left;
+            color: #000000;
+            /*background-color: cornflowerblue;*/
+        }
+        .message pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+
+        
+        .chat-header {
+            background-color: #0ba820;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .user-input {
+            display: flex;
+            border-top: 1px solid #ccc;
+        }
+        .user-input input {
+            flex: 1;
+            padding: 15px;
+            border: none;
+            border-radius: 0;
+            font-size: 16px;
+        }
+        .user-input button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 15px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .message {
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .message.user {
+            justify-content: flex-end;
+        }
+        .message .text {
+            max-width: 70%;
+            padding: 10px 15px;
+            border-radius: 20px;
+            line-height: 1.5;
+        }
+        .message.user .text {
+            background-color: #26a537; /* color de mensaje de donde se pregunta */
+            color: #fff;
+            border-top-right-radius: 0;
+        }
+        .message.bot .text {
+            background-color: #c15fda; /* color de mensaje de respuesta */
+            border-top-left-radius: 0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="chat-container">
+        <div class="chat-box" id="chat-box"></div>
+        <div class="user-input">
+            <input type="text" id="user-input" placeholder="Escribe tu mensaje...">
+            <button onclick="sendMessage()">Enviar</button>
+        </div>
+    </div>
+
+<script src="chatbot.js"></script>
+
+</body>
+</html>
