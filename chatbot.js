@@ -1,6 +1,17 @@
 class Chatbot {
     constructor() {
-        this.context = {};
+        this.titulo = {
+            tit:["oh"]
+        };
+        this.descripcion = {
+            des:["hola"]
+        };
+        this.titulo1 = {
+
+        };
+        this.descripcion1 = {
+
+        };
         this.responses = {
             greetings: ["¡Hola! ¿Cómo puedo ayudarte hoy?", "¡Hola! ¿Qué tal tu día?", "¡Saludos! ¿En qué puedo asistirte?", "¡Hola! ¿Cómo te encuentras?", "¡Hola! ¿Qué necesitas?", "¡Hola! ¿Todo bien por ahí?", "¡Hola! ¿Cómo va todo?", "¡Hola! ¿En qué puedo colaborar?", "¡Hola! ¿Cómo estás hoy?", "¡Hola! ¿Qué te trae por aquí?", "¡Hola! ¿Qué puedo hacer por ti hoy?", "¡Hola! ¿Cómo te sientes?", "¡Hola! ¿En qué estás interesado?", "¡Hola! ¿Cómo puedo ser de ayuda?", "¡Hola! ¿Qué novedades hay?", "¡Hola! ¿Cómo puedo asistirte en este momento?", "¡Hola! ¿Cómo va todo contigo?", "¡Hola! ¿En qué puedo ayudarte?", "¡Hola! ¿Cómo puedo hacer tu día mejor?", "¡Hola! ¿Tienes alguna pregunta?", "¡Hola! ¿Qué puedo hacer por ti ahora?", "¡Hola! ¿En qué estás trabajando?", "¡Hola! ¿Cómo puedo ser útil para ti hoy?", "¡Hola! ¿Qué tal está todo?", "¡Hola! ¿En qué puedo colaborar contigo?", "¡Hola! ¿Qué información necesitas?", "¡Hola! ¿Cómo va tu jornada?", "¡Hola! ¿Qué puedo hacer para ayudarte?","¡Hola! ¿Cómo puedo asistirte hoy?","¡Hola! ¿En qué puedo ayudarte?","¡Hola! ¿Qué necesitas hoy?","¡Saludos! ¿Cómo puedo ayudarte?","¡Hola! ¿Cómo estás?","¡Hola! Estoy aquí para ayudarte. ¿Qué necesitas?","¡Hola! ¿En qué puedo ser útil hoy?","¡Hola! ¿En qué puedo asistirte hoy?","¡Hola! Estoy aquí para ayudarte. ¿Cómo puedo asistirte?","¡Hola! ¿En qué necesitas ayuda?","¡Hola! Estoy disponible para cualquier cosa que necesites.","¡Hola! ¿Qué necesitas saber?","¡Hola! ¿Cómo puedo ser de ayuda hoy?","¡Hola! ¿Cómo estás hoy?","¡Hola! ¿Cómo puedo ayudarte en este momento?","¡Hola! ¿Qué puedo hacer por ti?","¡Hola! ¿Qué necesitas saber hoy?","¡Hola! ¿Cómo va tu día?",
             "¡Hola! ¿Cómo puedo ayudarte?","¡Hola! Estoy aquí para ayudarte. ¿En qué puedo asistirte?"],
@@ -19,27 +30,126 @@ class Chatbot {
             "Entiendo que estés aburrido. ¿Qué tal si te hago unas preguntas interesantes para pasar el tiempo?","Lamento que te sientas aburrido. ¿Qué te parece si encontramos algo entretenido juntos?"],
             no: ["Entendido. Si cambias de opinión o necesitas ayuda con algo más, aquí estaré.","¡Está bien! Si hay algo más en lo que pueda asistirte, solo dímelo.","Comprendido. Si tienes alguna otra pregunta o necesitas ayuda más adelante, estaré aquí.","De acuerdo. No dudes en volver si necesitas algo más en el futuro.","¡Entendido! Si decides que necesitas ayuda con algo más, no dudes en contactarme.","¡Claro! Si hay otra cosa en la que pueda asistirte, házmelo saber.","De acuerdo. Si cambias de opinión o necesitas ayuda con otra cosa, aquí estaré.","Entiendo. Si en algún momento necesitas ayuda, no dudes en decirlo.","Está bien. Estoy aquí para ayudarte con cualquier otra cosa que necesites.","Comprendido. Si hay algo más en lo que pueda ayudarte, solo avísame.","¡Entendido! Si surge algo más, estaré aquí para asistirte.","De acuerdo. Si necesitas ayuda con otra cosa, estaré aquí para ti.","¡Claro! Si tienes otra pregunta o necesitas asistencia, no dudes en decírmelo.","Entiendo. Si en el futuro necesitas algo más, estaré aquí para ayudarte.","¡De acuerdo! Si hay algo más en lo que pueda asistirte, házmelo saber.","Está bien. Si necesitas ayuda en el futuro, no dudes en volver.","¡Entendido! Si decides que necesitas asistencia más adelante, aquí estaré.","Comprendido. Si necesitas algo más, solo avísame.","De acuerdo. Si hay algo más en lo que pueda ayudarte, estaré aquí.","¡Claro! Si cambias de opinión o necesitas asistencia en otro momento, aquí estaré.","Está bien. Si tienes más preguntas o necesitas ayuda, no dudes en decírmelo.","¡Entiendo! Si hay otra cosa en la que pueda asistirte, solo dímelo.","De acuerdo. Si necesitas algo más en el futuro, aquí estaré para ayudarte.","¡Claro! Si en algún momento necesitas más ayuda, estaré disponible para ti.","Comprendido. Si surge otra necesidad, no dudes en contactarme.","Está bien. Si en el futuro necesitas asistencia, estaré aquí para ayudarte.","¡Entendido! Si en algún momento necesitas ayuda con otra cosa, no dudes en decírmelo.","De acuerdo. Si necesitas algo más más adelante, aquí estaré para asistirte.","¡Claro! Si hay algo más en lo que pueda ayudarte en el futuro, solo avísame.","Comprendido. Si decides que necesitas ayuda con otra cosa, estaré aquí para ti."],
             okey: ["¡Perfecto! ¿En qué más puedo asistirte?","¡Genial! Si necesitas algo más, solo dímelo.","¡Entendido! ¿Cómo puedo ayudarte a continuación?","¡Perfecto! Si hay algo más en lo que pueda ayudarte, aquí estaré.","¡Genial! ¿Hay algo más en lo que necesites asistencia?","¡Perfecto! Estoy aquí para cualquier otra cosa que necesites.","¡De acuerdo! Si surge alguna otra consulta, no dudes en decírmelo.","¡Entendido! ¿Qué te gustaría hacer a continuación?","¡Genial! Estoy aquí para resolver cualquier otra duda que tengas.","¡Perfecto! ¿En qué más puedo ayudarte hoy?","¡De acuerdo! Si hay más en lo que pueda asistirte, solo házmelo saber.","¡Entendido! ¿Cómo puedo seguir ayudándote?","¡Genial! Si tienes otra pregunta, estaré encantado de responderla.","¡Perfecto! Estoy aquí para lo que necesites.","¡Entendido! Si necesitas más ayuda, no dudes en contactarme.","¡Genial! ¿Qué más puedo hacer por ti?","¡De acuerdo! Si surge algo más, aquí estaré para ayudarte.","¡Perfecto! ¿Cómo puedo asistirte en lo que sigue?","¡Entendido! Si necesitas más información, estoy a tu disposición.","¡Genial! ¿Qué quieres hacer a continuación?","¡De acuerdo! Si hay algo más en lo que pueda ayudarte, solo avísame.","¡Perfecto! Si necesitas algo más, solo dímelo.","¡Entendido! ¿Hay algo más que pueda hacer por ti?","¡Genial! Estoy aquí para cualquier otra consulta que tengas.","¡De acuerdo! Si surge alguna otra pregunta, no dudes en decírmelo.","¡Perfecto! ¿En qué más puedo asistirte hoy?","¡Entendido! ¿Qué otra cosa necesitas?","¡Genial! Si hay algo más en lo que pueda ayudarte, aquí estaré.","¡De acuerdo! ¿Qué más puedo hacer por ti?","¡Perfecto! Si hay algo más en lo que necesites ayuda, solo házmelo saber."],
-            juego: ["¡Claro! ¿Qué tipo de juegos te gustan? Así puedo recomendarte algo que te interese.","¡Por supuesto! ¿Prefieres juegos de acción, estrategia, o algo más relajado?","Depende de tus gustos. Si te gustan los juegos de aventuras, te recomiendo [Nombre del juego]. ¿Qué opinas?","Para un juego emocionante, te recomiendo [Nombre del juego]. ¿Te gusta el género de [género]?","Si buscas algo divertido, [Nombre del juego] es una excelente opción. ¿Qué tipo de juegos disfrutas más?","Te sugiero [Nombre del juego] si te gustan los retos. ¿Estás interesado en juegos de [género]?","¿Qué te parece [Nombre del juego]? Es perfecto para pasar el tiempo y es muy divertido.","Para una experiencia entretenida, prueba [Nombre del juego]. ¿Qué tipo de juegos prefieres?","Si te gustan los juegos de rol, te recomiendo [Nombre del juego]. ¿Te interesa ese tipo de juego?","¡Claro! ¿Te gustan los juegos en solitario o prefieres jugar con amigos? Así te puedo recomendar mejor.","Te recomiendo [Nombre del juego] si disfrutas de juegos de estrategia. ¿Te parece interesante?","Para una experiencia de juego inmersiva, te sugiero [Nombre del juego]. ¿Te gustan los juegos de [género]?","Si te gustan los juegos de acción, [Nombre del juego] es una excelente opción. ¿Te gustaría probarlo?","Para algo relajante, [Nombre del juego] podría ser ideal. ¿Qué tipo de juegos prefieres jugar?","Si buscas algo desafiante, prueba [Nombre del juego]. ¿Te gustan los juegos difíciles?","Para juegos de aventuras épicas, [Nombre del juego] es una gran elección. ¿Qué tipo de juego disfrutas?","Te recomiendo [Nombre del juego] si te encantan los juegos de rol. ¿Qué opinas?","Para una experiencia de juego divertida, [Nombre del juego] es muy popular. ¿Te interesa?","Si buscas algo innovador, prueba [Nombre del juego]. ¿Qué tipo de juegos te atraen más?","Te sugiero [Nombre del juego] si te gustan los juegos de estrategia. ¿Te gustaría probarlo?","Para un juego que te mantendrá entretenido, [Nombre del juego] es ideal. ¿Qué opinas?","Si disfrutas de juegos con una buena historia, te recomiendo [Nombre del juego]. ¿Qué te parece?","Para una experiencia de juego emocionante, prueba [Nombre del juego]. ¿Qué tipo de juegos te gustan?","Si buscas algo con acción intensa, [Nombre del juego] es una gran opción. ¿Te interesa?","Te recomiendo [Nombre del juego] si prefieres juegos de aventuras. ¿Qué opinas?","Para un juego relajado y entretenido, prueba [Nombre del juego]. ¿Te gustaría jugarlo?",
-            "Si te gustan los juegos cooperativos, [Nombre del juego] es una excelente opción. ¿Te interesa?","Te sugiero [Nombre del juego] si disfrutas de juegos de estrategia y táctica. ¿Qué te parece?","Para un desafío mental, [Nombre del juego] podría ser ideal. ¿Qué opinas de los juegos de rompecabezas?","Si buscas algo divertido y social, prueba [Nombre del juego]. ¿Te gusta jugar con amigos?","Te recomiendo [Nombre del juego] si te gustan los juegos de simulación. ¿Qué opinas?","Para una experiencia inmersiva, [Nombre del juego] es perfecto. ¿Te gustan los juegos de aventuras?","Si prefieres un juego de acción y aventuras, te sugiero [Nombre del juego]. ¿Te interesa?","Para algo relajado y entretenido, prueba [Nombre del juego]. ¿Qué te parece?","Te recomiendo [Nombre del juego] si disfrutas de juegos con una buena historia. ¿Qué opinas?","Si buscas un juego emocionante, [Nombre del juego] es una gran opción. ¿Te interesa?","Para un desafío interesante, te sugiero [Nombre del juego]. ¿Qué opinas de los juegos de estrategia?","Si te gustan los juegos con múltiples jugadores, [Nombre del juego] es ideal. ¿Te gustaría jugarlo?","Te recomiendo [Nombre del juego] si prefieres juegos de rol y aventuras. ¿Qué opinas?","Para algo innovador y divertido, prueba [Nombre del juego]. ¿Te gustaría intentarlo?"],
+            juego: ["¡Claro! ¿Qué tipo de juegos te gustan? Así puedo recomendarte algo que te interese.","¡Por supuesto! ¿Prefieres juegos de acción, estrategia, o algo más relajado?","Depende de tus gustos. Si te gustan los juegos de aventuras, te recomiendo *Art of Conquest*. ¿Qué opinas?","Si buscas algo divertido, *Angry Birds 2* es una excelente opción. ¿Qué tipo de juegos disfrutas más?","Te sugiero *Verda o reto Boom* si te gustan los retos. ¿Estás interesado en juegos de [género]?","¿Qué te parece *Plants vs. Zombies*? Es perfecto para pasar el tiempo y es muy divertido.","Para una experiencia entretenida, prueba *Lords Mobile*. ¿Qué tipo de juegos prefieres?","Si te gustan los juegos de rol, te recomiendo *Age of Origins*. ¿Te interesa ese tipo de juego?","¡Claro! ¿Te gustan los juegos en solitario o prefieres jugar con amigos? Así te puedo recomendar mejor.","Te recomiendo *Mobile Legends* si disfrutas de juegos de estrategia. ¿Te parece interesante?","Si te gustan los juegos de acción, *Free Fire* es una excelente opción. ¿Te gustaría probarlo?","Para algo relajante, *Stardew Valley* podría ser ideal. ¿Qué tipo de juegos prefieres jugar?","Si buscas algo desafiante, prueba *Annoying Pulzze Game*. ¿Te gustan los juegos difíciles?","Te sugiero *Clash Royale* si te gustan los juegos de estrategia. ¿Te gustaría probarlo?","Si disfrutas de juegos con una buena historia, te recomiendo *Game of Sultans*. ¿Qué te parece?","Si buscas algo con acción intensa, *PUBG MOBILE* es una gran opción. ¿Te interesa?","Te recomiendo *Last Island of Survival* si prefieres juegos de aventuras. ¿Qué opinas?",
+            "*Bombsquad*: Un juego de acción y minijuegos donde los jugadores pueden cooperar o competir","Para un desafío mental, *Brain Test* podría ser ideal. ¿Qué opinas de los juegos de rompecabezas?","Si buscas algo divertido y social, prueba *Bombsquad*. ¿Te gusta jugar con amigos?","Te recomiendo *Truck Simulador: Ultimate* si te gustan los juegos de simulación. ¿Qué opinas?","Si prefieres un juego de acción y aventuras, te sugiero *Adventure Bay: Juego de granja*. ¿Te interesa?","Para algo relajado y entretenido, prueba *Clash of Clan*. ¿Qué te parece?","Para un desafío interesante, te sugiero [Nombre del juego]. ¿Qué opinas de los juegos de estrategia?","Si te gustan los juegos con múltiples jugadores, *Mini juego Stickman* es ideal. ¿Te gustaría jugarlo?","Te recomiendo *Last Day on Earth* si prefieres juegos de rol y aventuras. ¿Qué opinas?"],
             musica: ['Pop: Artistas como Taylor Swift, Dua Lipa, y Ed Sheeran.', 'Jazz: Artistas como Miles Davis, John Coltrane, y Ella Fitzgerald.', 'Música Electrónica: DJs como Daft Punk, Avicii, y Calvin Harris.'],
             musica2: ['Unas de las musicas que puedes escuchar. Pop: Artistas como Taylor Swift, Dua Lipa, y Ed Sheeran.', 'Unas de las musicas que puedes escuchar. Jazz: Artistas como Miles Davis, John Coltrane, y Ella Fitzgerald.', 'Unas de las musicas que puedes escuchar. Música Electrónica: DJs como Daft Punk, Avicii, y Calvin Harris.'],
-            mejor_jugador: ['Lionel Messi: Con múltiples Balones de Oro y una carrera destacada en el FC Barcelona y el PSG, es ampliamente considerado uno de los mejores de todos los tiempos.'],
-            que_entiendes:["Entiendo palabras basicas", "Solo entiendo palabras basicas", "Entiendo algunas preguntas, de acuerdo a eso le respondo. aun falta en desarrollarme", "Palabras basicas", "Si quiere podemos hablar un rato. me disculpas si no lo podre responderlo."],
-            hora: ["La hora actual en Bolivia es: ", "La hora es: ", "La hora actual es: ", "La hora Boliviana es", "Hora de Bolivia: ", "Si usted no sabia la hora. La hora es: "], // Añadido para la pregunta de la hora
-            fecha: ["Hoy es, ", "La fecha es, ", "La fecha actual en Bolivia es: ", "La fecha es: ","Hoy es"], // Añadido para la fecha
-            año: ["El año en el que estamos es: ", "El año actual en Bolivia es: ", "Se olvido el año?. El año es: "], // Añadido para el año
-            mes: ["El mes en el que estamos es: ", "El mes es: ", "El mes actual en Bolivia es: "], // Añadido para el mes
-            dia: [ "Hoy es, ", "El día de hoy en Bolivia es: "], // Añadido para el día
+            que_entiendes:["Entiendo que estás buscando información sobre algo. ¿Qué puedo ayudarte a resolver?","Puedo procesar tus preguntas y proporcionar respuestas basadas en la información que tengo.","Entiendo tus consultas y trato de ofrecer la mejor respuesta posible según mis datos.","Comprendo que deseas obtener una respuesta a tu pregunta. ¿Cómo puedo asistirte?","Mi tarea es entender tus preguntas y ofrecerte respuestas útiles.","Entiendo tus necesidades y me esfuerzo por proporcionarte la información más precisa.","Puedo interpretar lo que me dices y ayudarte a encontrar lo que necesitas.","Entiendo que necesitas información o asistencia. ¿En qué puedo ayudarte hoy?","Trato de entender tus preguntas para ofrecerte respuestas adecuadas.","Mi objetivo es comprender tus consultas y proporcionarte la mejor ayuda posible.","Entiendo que estás buscando algo específico. ¿Cómo puedo asistirte en esto?","Comprendo el contexto de tus preguntas y trato de dar respuestas precisas.","Entiendo tus solicitudes y busco la manera de responderlas de la mejor forma.","Puedo procesar y entender tus preguntas para brindarte respuestas útiles.","Entiendo la información que me proporcionas y trato de ofrecerte la mejor respuesta.","Mi propósito es entender tus necesidades y responder de manera efectiva.","Entiendo que estás en busca de información. ¿En qué puedo ayudarte?","Comprendo tus inquietudes y estoy aquí para ofrecerte respuestas claras.","Puedo interpretar tus preguntas y ofrecerte información relevante.","Entiendo que necesitas ayuda. ¿Cómo puedo asistirte en esto?","Comprendo tus peticiones y trato de darte la información que necesitas.","Mi función es entender tus preguntas y proporcionarte respuestas adecuadas.","Entiendo lo que estás buscando y trato de ofrecerte la información más relevante.","Puedo captar tus consultas y darte respuestas basadas en lo que sé.","Entiendo que tienes dudas y estoy aquí para responderlas.","Mi objetivo es comprender tus preguntas y ayudarte con la mejor información posible.","Comprendo el propósito de tus consultas y ofrezco respuestas basadas en mis datos.","Entiendo tus necesidades de información y trato de proporcionarte respuestas precisas.","Puedo captar lo que me preguntas y ofrecerte la asistencia que necesitas.","Entiendo que quieres saber más sobre algo. ¿Cómo puedo ayudarte a resolver tu duda?"],
+            hora: ["La hora actual es ","Ahora mismo son las ","La hora exacta es ","Actualmente son ","La hora actual es ","En este momento son las ","Te informo que son las ","El reloj marca las ","La hora es ","Actualmente son las ","En este instante, la hora es ","El tiempo ahora es ","La hora precisa es ","En este preciso momento son las ","La hora local es ","En este instante, el reloj muestra ","La hora del sistema es ","Te doy la hora actual: ","El reloj digital indica ","La hora exacta en este momento es ","La hora actual en tu zona es ","El tiempo actual es "], // Añadido para la pregunta de la hora
+            fecha: ["La fecha actual es ","Hoy es ","La fecha de hoy es ","En este momento, la fecha es ","Te informo que la fecha actual es ","Hoy estamos a ","La fecha hoy es ","Actualmente es ","La fecha exacta es ","La fecha en este instante es ","En este momento, la fecha es ","La fecha hoy en mi reloj es ","Ahora mismo, la fecha es ","La fecha precisa es ","En este instante, estamos a ","Te doy la fecha de hoy: ","El calendario indica que hoy es ","La fecha actual en mi sistema es ","Hoy estamos en ","La fecha del día es ","Hoy la fecha es ","La fecha exacta en este momento es ","El día de hoy es ","La fecha actual según mi calendario es "], // Añadido para la fecha
+            año: ["El año actual es","Estamos en el año","Es el año","Este es el año","La fecha actual es","El calendario marca el año","En estos momentos es el año","El año en curso es","El año que tenemos es","Estamos viviendo el año","Ahora mismo estamos en el año","El año presente es","Estamos en el","El calendario actual indica que es el año","La fecha del año es","Actualmente, el año es","Según el calendario, estamos en el año","Este año es","Hoy es el año","Según el calendario, estamos en el año","El año que estamos viviendo es","En el presente momento, el año es","El año en el que estamos es","La fecha actual corresponde al año "], // Añadido para el año
+            mes: ["El mes actual es ","Estamos en el mes de ","Este es el mes de ","El calendario marca el mes de ","El mes que tenemos ahora es ","En estos momentos es ","El mes presente es ","Actualmente, es ","El mes actual según el calendario es ","La fecha del mes es ","Ahora mismo es ","El mes en curso es ","Hoy es ","Según el calendario, estamos en ","En el presente momento, es ","Este mes corresponde a ","Estamos en el mes de ","La fecha actual indica que es ","El calendario marca el mes de ","El mes que estamos viviendo es ","En este momento del año, es ","El mes en curso es ","Según el sistema de fechas, estamos en "], // Añadido para el mes
+            dia: ["Hoy es el día ","En estos momentos es ","El día presente es ","Actualmente, es ","Hoy es el último día de la semana laboral: ","El día actual según el calendario es ","La fecha del día es ","Ahora mismo es ","El día en curso es ","Hoy corresponde a ","Según el calendario, hoy es ","El día de hoy es ","En el presente momento, es ","Actualmente estamos en un ","La fecha de hoy indica que es ","El calendario marca hoy como ","El día que estamos viviendo es ","Hoy corresponde a un ","El día en curso es ","Según el sistema de fechas, hoy es "], // Añadido para el día
             matematicas: ["El resultado es: "],
-            fallback: ["Lo siento, no te entiendo bien.", "¿Podrías repetirlo?", "No estoy seguro de cómo responder a eso.", "No puedo responderle por el momento. El chat.RCL aún esta en desarrollo"]
+            fallback: ["Lo siento, no entiendo lo que estás diciendo.","No estoy seguro de cómo responder a eso.","Parece que no entendí tu pregunta. ¿Podrías reformularla?","No tengo la información que buscas en este momento.","¿Podrías darme más detalles para ayudarte mejor?","No puedo responder a eso en este momento. ¿Hay algo más en lo que pueda ayudarte?","No estoy familiarizado con eso. ¿Puedo asistirte con otra cosa?","Lo siento, no tengo la respuesta a eso. ¿Cómo más puedo ayudarte?","Esa pregunta está fuera de mi alcance. ¿Puedo ayudarte con algo diferente?","No entiendo tu solicitud. Por favor, intenta de nuevo.","Esa información no está disponible en este momento. ¿Puedo ayudarte con otra cosa?","No estoy seguro de lo que necesitas. ¿Puedes ser más específico?","No tengo la capacidad de responder eso ahora. ¿Qué más te gustaría saber?","Lo siento, no tengo una respuesta para eso. ¿Te gustaría preguntar otra cosa?","No puedo ayudarte con eso en este momento. ¿Hay algo más en lo que pueda asistirte?","Tu solicitud no está clara para mí. ¿Podrías explicarla de otra manera?","Parece que hubo un error. ¿Puedes intentarlo de nuevo?","No tengo información sobre eso. ¿Te gustaría que te ayudara con algo diferente?","No puedo procesar tu solicitud. ¿Cómo más puedo asistirte hoy?","Lo siento, no tengo suficiente información para responder a eso.","No comprendo tu pregunta. ¿Podrías reformularla?","Esa consulta está fuera de mi alcance. ¿Puedo ayudarte con algo más?","No tengo la respuesta que buscas. ¿Hay algo más en lo que pueda asistirte?","Lo siento, parece que no entiendo tu pregunta. ¿Puedes intentarlo de nuevo?","No tengo datos sobre eso en este momento. ¿Hay algo más en lo que pueda ayudarte?","No tengo información sobre eso. ¿Te gustaría hacerme otra pregunta?","Lo siento, pero no puedo ayudar con eso ahora mismo. ¿Hay algo más que necesites?","No estoy seguro de cómo responder a eso. ¿Podrías darme más detalles?","No puedo responder a esa consulta. ¿Cómo más puedo asistirte?","Tu pregunta no está clara para mí. ¿Puedes explicarla de otra manera?"],
+            tema_especifico: ["Puedes encontrar información sobre [tema específico] en [sitio web o fuente].","Te recomendaría visitar [sitio web] para obtener más detalles sobre [tema específico].","Para información sobre [tema específico], puedes consultar [fuente de referencia].","Puedes buscar en [base de datos o sitio web] para encontrar información sobre [tema específico].","Revisa [sitio web o plataforma] para obtener información actualizada sobre [tema específico].","Para datos detallados sobre [tema específico], [nombre del libro o recurso] es una buena fuente.","En [sitio web o blog] encontrarás artículos útiles sobre [tema específico].","Para aprender más sobre [tema específico], visita [sitio web o recurso académico].","Te sugiero buscar en [biblioteca digital o archivo] para información sobre [tema específico].","Puedes explorar [sitio web o foro] para discusiones y artículos sobre [tema específico].","Para información técnica sobre [tema específico], prueba [sitio web o publicación técnica].","Puedes encontrar guías y tutoriales sobre [tema específico] en [plataforma de aprendizaje].","Revisa [sitio web] para acceder a investigaciones y estudios sobre [tema específico].","Para detalles completos sobre [tema específico], visita [plataforma de noticias o blog].","Puedes consultar [sitio web o institución] para obtener informes y datos sobre [tema específico].","Para más información sobre [tema específico], te recomiendo leer [libro o artículo].","En [sitio web o revista] encontrarás recursos relevantes sobre [tema específico].","Busca en [plataforma de videos o tutoriales] para encontrar contenido sobre [tema específico].","Para recursos académicos sobre [tema específico], consulta [base de datos o biblioteca].","Puedes encontrar estudios recientes sobre [tema específico] en [revista científica o sitio web].","Para información práctica sobre [tema específico], prueba [sitio web o manual].","Revisa [foro o comunidad en línea] para discusiones y consejos sobre [tema específico].","En [sitio web de referencia] puedes encontrar datos y análisis sobre [tema específico].","Para información sobre [tema específico], busca en [plataforma educativa o curso en línea].","Puedes consultar [sitio web o red social] para opiniones y experiencias sobre [tema específico].","Para una visión general sobre [tema específico], visita [sitio web o enciclopedia en línea].",
+            "En [plataforma de publicaciones] puedes encontrar artículos y estudios sobre [tema específico].","Para recursos visuales sobre [tema específico], prueba [sitio web de imágenes o videos].","Puedes investigar sobre [tema específico] en [sitio web especializado o agencia].","Para obtener información sobre [tema específico], te recomiendo explorar [sitio web o portal de datos]."],
+            mejorar_mi_productividad: ["Para mejorar tu productividad, puedes empezar creando una lista de tareas diarias y priorizarlas.","Una buena estrategia es usar técnicas de gestión del tiempo, como la Técnica Pomodoro, para mantenerte enfocado.","Intenta establecer metas claras y alcanzables para cada día. Esto te ayudará a mantenerte en el camino correcto.","Una forma efectiva de aumentar la productividad es minimizar las distracciones, como poner el móvil en modo silencioso.","Considera usar aplicaciones de gestión de tareas como Todoist o Trello para organizar y seguir tus proyectos.","Asegúrate de tomar descansos regulares para evitar el agotamiento y mantener alta tu energía.","La planificación anticipada, como la creación de un calendario semanal, puede ayudarte a gestionar mejor tu tiempo.","Intenta trabajar en bloques de tiempo concentrados y luego tomar un breve descanso para maximizar tu enfoque.","Establecer un entorno de trabajo ordenado y libre de distracciones puede mejorar tu productividad significativamente.","Hacer ejercicio regularmente y mantener una dieta equilibrada también puede aumentar tu capacidad para ser productivo.","Implementa un sistema de recompensas para motivarte a completar tareas importantes y mantener el impulso.","Usa herramientas de productividad como Evernote para tomar notas y almacenar ideas que puedan ayudarte en tus proyectos.","Establece una rutina matutina consistente para comenzar el día con una mentalidad enfocada y organizada.","Aprende a delegar tareas cuando sea posible para centrarte en las actividades que realmente importan.","Haz un seguimiento de tu tiempo para identificar en qué lo estás gastando y ajustar tus hábitos en consecuencia.","Prueba la técnica de ‘dos minutos’ para tareas rápidas: si algo puede hacerse en dos minutos o menos, hazlo de inmediato.","Revisa y ajusta tus objetivos periódicamente para asegurarte de que sigues alineado con tus prioridades.","Mantén un equilibrio saludable entre el trabajo y la vida personal para evitar el agotamiento y mantenerte motivado.","Usa aplicaciones de bloqueo de sitios web para evitar distracciones en línea mientras trabajas.","Organiza tu espacio de trabajo de manera que solo tenga los elementos esenciales para mantenerte enfocado.",
+            "Desarrolla una lista de verificación diaria para ayudarte a seguir tu progreso y completar tareas importantes.","Asegúrate de dormir lo suficiente cada noche, ya que un buen descanso es clave para mantener la productividad.","Considera el uso de técnicas de visualización para establecer una visión clara de tus objetivos y mantener la motivación.","Practica la meditación o técnicas de relajación para reducir el estrés y mejorar tu capacidad para concentrarte.","Mantén una actitud positiva y flexible frente a los desafíos para mantenerte motivado y enfocado en tus objetivos.","Usa la técnica de la matriz de Eisenhower para priorizar tareas según su urgencia e importancia.","Haz revisiones diarias o semanales de tus logros y ajusta tus estrategias según sea necesario para mejorar.","Desarrolla hábitos de trabajo efectivos, como comenzar con las tareas más difíciles primero, para mantener la productividad.","Participa en grupos de apoyo o de responsabilidad para compartir tus objetivos y mantenerte motivado.","Encuentra un mentor o coach que pueda proporcionarte consejos personalizados y ayudarte a mejorar tu productividad."],
+            inteligencia_artificial:["La inteligencia artificial (IA) es un campo de la informática que se enfoca en crear sistemas capaces de realizar tareas que normalmente requieren inteligencia humana.","La IA es la simulación de procesos de inteligencia humana por parte de sistemas informáticos, como el aprendizaje, el razonamiento y la resolución de problemas.","La inteligencia artificial se refiere a la capacidad de las máquinas para realizar tareas que normalmente requieren inteligencia humana, como reconocer patrones y tomar decisiones.","En términos simples, la IA es la creación de programas de computadora que pueden realizar tareas de manera inteligente y autónoma.","La inteligencia artificial es un área de la tecnología que permite a las máquinas aprender y adaptarse a nuevas situaciones sin intervención humana constante.","La IA utiliza algoritmos y modelos matemáticos para imitar la forma en que los humanos piensan y resuelven problemas.","La inteligencia artificial incluye tecnologías como el aprendizaje automático y el procesamiento del lenguaje natural para permitir que las máquinas comprendan y actúen sobre datos.","En esencia, la IA es la capacidad de las máquinas para realizar tareas que normalmente requieren la inteligencia de un ser humano, como entender el lenguaje o jugar al ajedrez.","La inteligencia artificial se basa en la creación de sistemas que pueden aprender y hacer predicciones o decisiones a partir de datos.","La IA abarca una amplia gama de tecnologías que permiten a las computadoras imitar funciones cognitivas humanas como el aprendizaje y la toma de decisiones.","En el campo de la inteligencia artificial, se desarrollan sistemas y algoritmos que permiten a las máquinas realizar tareas complejas de manera autónoma.","La inteligencia artificial es una rama de la informática que se centra en el diseño de sistemas que pueden aprender y realizar tareas sin intervención humana directa.","La IA combina técnicas de matemáticas, estadísticas y programación para crear sistemas capaces de realizar tareas inteligentes, como el reconocimiento de voz y la visión por computadora.","La inteligencia artificial busca crear máquinas que puedan realizar tareas que normalmente requieren inteligencia humana, como la comprensión del lenguaje natural y la planificación.","En el ámbito de la tecnología, la IA se refiere a la capacidad de las máquinas para aprender y adaptarse a través de la experiencia y los datos.",
+            "La inteligencia artificial incluye técnicas como el aprendizaje supervisado y no supervisado para permitir que las máquinas analicen y actúen sobre datos.","La IA es el estudio y desarrollo de sistemas que pueden realizar tareas cognitivas, como el razonamiento y el aprendizaje, que normalmente requieren inteligencia humana.","La inteligencia artificial permite a las máquinas realizar tareas inteligentes mediante el uso de algoritmos y modelos que imitan la cognición humana.","En términos generales, la IA es el proceso de hacer que las máquinas sean capaces de pensar y aprender de manera similar a los humanos.","La inteligencia artificial es una tecnología que permite a las máquinas analizar datos, tomar decisiones y realizar tareas que normalmente requieren la intervención humana.","La IA utiliza técnicas de programación y datos para crear sistemas que pueden aprender de la experiencia y hacer predicciones o tomar decisiones.","La inteligencia artificial se refiere al desarrollo de sistemas computacionales que pueden realizar tareas que requieren inteligencia, como el reconocimiento de patrones y la comprensión del lenguaje.","La IA es una tecnología que permite a las computadoras imitar procesos cognitivos humanos y realizar tareas como el análisis de datos y la toma de decisiones.","En el campo de la IA, se utilizan modelos y algoritmos para permitir que las máquinas realicen tareas inteligentes, como la predicción y la clasificación.","La inteligencia artificial es el estudio y diseño de sistemas que pueden realizar funciones cognitivas, como el aprendizaje y la resolución de problemas, de manera autónoma.","La IA incluye una variedad de tecnologías y métodos que permiten a las máquinas realizar tareas inteligentes, como el procesamiento de lenguaje natural y el aprendizaje automático.","En resumen, la inteligencia artificial es el desarrollo de sistemas que pueden realizar tareas que requieren inteligencia humana, como la percepción y el razonamiento.","La IA se basa en la creación de algoritmos y modelos que permiten a las máquinas aprender de datos y realizar tareas complejas sin intervención humana constante.","La inteligencia artificial es una tecnología avanzada que permite a las máquinas realizar tareas como el reconocimiento de imágenes y la comprensión del lenguaje mediante el aprendizaje de datos.",
+            "La IA se refiere a sistemas y tecnologías que permiten a las máquinas imitar y realizar funciones cognitivas humanas, como aprender de la experiencia y resolver problemas."],
+            qué_significa_palabra_o_término:["La palabra '[palabra o término]' se refiere a [definición].","En términos simples, '[palabra o término]' significa [definición].","El término '[palabra o término]' es usado para describir [definición].","'[Palabra o término]' se define como [definición].","En el contexto de [tema], '[palabra o término]' significa [definición].","Cuando hablamos de '[palabra o término]', nos referimos a [definición].","'[Palabra o término]' es una palabra que se utiliza para [definición].","La definición de '[palabra o término]' es [definición].","En general, '[palabra o término]' se entiende como [definición].","El significado de '[palabra o término]' es [definición].","En el ámbito de [campo o industria], '[palabra o término]' significa [definición].","Cuando usamos '[palabra o término]', estamos hablando de [definición].","'[Palabra o término]' describe [definición] en [contexto].","En [idioma], '[palabra o término]' se traduce como [definición].","La palabra '[palabra o término]' se utiliza para [definición].","En el contexto de [tema], '[palabra o término]' tiene el significado de [definición].","'[Palabra o término]' se refiere a [definición].","El término '[palabra o término]' es sinónimo de [definición].","Cuando se menciona '[palabra o término]', se está hablando de [definición].","'[Palabra o término]' se define como [definición].","En [contexto], '[palabra o término]' significa [definición].","La definición de '[palabra o término]' en [campo] es [definición].","El término '[palabra o término]' se usa para describir [definición].","En [campo específico], '[palabra o término]' se refiere a [definición].","La palabra '[palabra o término]' se traduce como [definición] en [idioma].","El significado de '[palabra o término]' en [contexto] es [definición].","'[Palabra o término]' es un término que se utiliza para [definición].","En el área de [campo], '[palabra o término]' tiene el significado de [definición].","'[Palabra o término]' es una expresión que significa [definición].","En [tema], '[palabra o término]' se entiende como [definición].","El significado de '[palabra o término]' es [definición] en [contexto].","'[Palabra o término]' se usa para [definición].","En [industria], '[palabra o término]' se refiere a [definición].","La definición de '[palabra o término]' en [tema] es [definición].","En [campo], '[palabra o término]' se traduce como [definición].",
+            "El término '[palabra o término]' significa [definición] en [idioma].","'[Palabra o término]' se refiere a [definición] en [contexto].","Cuando hablamos de '[palabra o término]', estamos describiendo [definición].","La palabra '[palabra o término]' es equivalente a [definición].","En el contexto de [tema], '[palabra o término]' se utiliza para [definición].","'[Palabra o término]' se usa para describir [definición] en [campo].","El significado de '[palabra o término]' es [definición] en [idioma o contexto].","Cuando se menciona '[palabra o término]', se está refiriendo a [definición].","'[Palabra o término]' es un concepto que significa [definición].","En [industria], '[palabra o término]' tiene el significado de [definición].","La definición de '[palabra o término]' es [definición] según [fuente].","'[Palabra o término]' describe [definición] en [contexto específico].","En [contexto], '[palabra o término]' se refiere a [definición].","El término '[palabra o término]' se usa para [definición] en [campo o tema]."],
+            receta_o_plato_específico:[],
+            recomendaciones_de_libros:["Te recomiendo Cien años de soledad de Gabriel García Márquez, El gran Gatsby de F. Scott Fitzgerald, y Matar a un ruiseñor de Harper Lee.","Para una buena lectura, prueba 1984 de George Orwell, El nombre del viento de Patrick Rothfuss, y Los juegos del hambre de Suzanne Collins.","Considera leer Sapiens de Yuval Noah Harari, El hombre en busca de sentido de Viktor E. Frankl, y Educada de Tara Westover.","Aquí tienes unas sugerencias: La sombra del viento de Carlos Ruiz Zafón, El código Da Vinci de Dan Brown, y La chica del tren de Paula Hawkins.",,"Algunos libros recomendados son Harry Potter y la piedra filosofal de J.K. Rowling, El alquimista de Paulo Coelho, y El psicoanalista de John Katzenbach.","Te sugiero El círculo de Dave Eggers, La verdad sobre el caso Harry Quebert de Joël Dicker, y Bajo la misma estrella de John Green.","Para disfrutar de una buena lectura, prueba La elegancia del erizo de Muriel Barbery, La casa de los espíritus de Isabel Allende, y Los pilares de la tierra de Ken Follett.","Aquí tienes algunos libros que podrías disfrutar: La mujer en la ventana de A.J. Finn, Circe de Madeline Miller, y El jardín de las mariposas de Dot Hutchison.","Recomiendo El hombre en el castillo de Philip K. Dick, La caverna de José Saramago, y El círculo de Dave Eggers.","Para una lectura intrigante, considera El psicoanalista de John Katzenbach, El niño con el pijama de rayas de John Boyne, y La chica del tren de Paula Hawkins.","Algunas recomendaciones son El retrato de Dorian Gray de Oscar Wilde, Los siete maridos de Evelyn Hugo de Taylor Jenkins Reid, y La guía del autoestopista galáctico de Douglas Adams.","Aquí tienes una selección de libros: El lobo de mar de Jack London, La suerte de los irlandeses de William Trevor, y El infinito en un junco de Irene Vallejo.","Te sugiero leer El túnel de Ernesto Sabato, La mujer en la ventana de A.J. Finn, y La cabaña de William P. Young.","Algunas lecturas que podrías disfrutar son La isla bajo el mar de Isabel Allende, Los crímenes de la calle Morgue de Edgar Allan Poe, y El club de la lucha de Chuck Palahniuk.","Para una buena lectura, considera El hombre que amaba a los perros de Leonardo Padura, La vida secreta de las abejas de Sue Monk Kidd, y La historia interminable de Michael Ende.","Aquí tienes unas recomendaciones: La sombra del viento de Carlos Ruiz Zafón, El cuento de la criada de Margaret Atwood, y Los juegos del hambre de Suzanne Collins.",
+            "Te recomiendo El coleccionista de relojes extraordinarios de Mark Hodder, El valle de los leones de John Vaillant, y El retrato de Dorian Gray de Oscar Wilde.","Para disfrutar de una buena lectura, prueba El secreto de Rhonda Byrne, Nunca me abandones de Kazuo Ishiguro, y La mujer en la ventana de A.J. Finn.","Algunos libros recomendados son El hombre que inventó la Navidad de Les Standiford, El jardín de los secretos de Kate Morton, y La vida invisible de Addie LaRue de V.E. Schwab.","Considera estos títulos: El océano al final del camino de Neil Gaiman, El día que se perdió la cordura de Javier Castillo, y Los renglones torcidos de Dios de Torcuato Luca de Tena.","Te sugiero leer El corazón helado de Almudena Grandes, La amistad de Mila Fernández, y El niño con el pijama de rayas de John Boyne.","Aquí tienes algunas sugerencias: El circo de la noche de Erin Morgenstern, La chica del tren de Paula Hawkins, y Los pilares de la tierra de Ken Follett.","Para una buena lectura, considera El hombre que susurraba a las mujeres de Jodi Picoult, El jardín de las mariposas de Dot Hutchison, y El club de la lucha de Chuck Palahniuk.","Algunas recomendaciones incluyen El arte de la felicidad de Dalai Lama, El libro de los abrazos de Eduardo Galeano, y El monje que vendió su Ferrari de Robin Sharma.","Para tus próximas lecturas, te recomiendo El infinito en un junco de Irene Vallejo, La mujer en la ventana de A.J. Finn, y La cabaña de William P. Young.","Aquí tienes unos títulos interesantes: El último deseo de Andrzej Sapkowski, La caverna de José Saramago, y El maestro de esgrima de Arturo Pérez-Reverte.","Te sugiero leer El hombre que amaba a los perros de Leonardo Padura, El código Da Vinci de Dan Brown, y La guía del autoestopista galáctico de Douglas Adams.","Algunos libros recomendados son La mujer en la ventana de A.J. Finn, Los juegos del hambre de Suzanne Collins, y El niño con el pijama de rayas de John Boyne.","Para una lectura envolvente, prueba El retrato de Dorian Gray de Oscar Wilde, La sombra del viento de Carlos Ruiz Zafón, y Circe de Madeline Miller.","Considera estos libros: La vida secreta de las abejas de Sue Monk Kidd, El hombre en busca de sentido de Viktor E. Frankl, y Bajo la misma estrella de John Green.","Te recomiendo El niño con el pijama de rayas de John Boyne, La elegancia del erizo de Muriel Barbery, y El jardín de las mariposas de Dot Hutchison.",
+            "Aquí tienes unas recomendaciones: El círculo de Dave Eggers, El lobo de mar de Jack London, y Los pilares de la tierra de Ken Follett.","Para disfrutar de una buena lectura, considera El infinito en un junco de Irene Vallejo, El día que se perdió la cordura de Javier Castillo, y El maestro de esgrima de Arturo Pérez-Reverte.","Algunas recomendaciones incluyen La mujer en la ventana de A.J. Finn, El código Da Vinci de Dan Brown, y La cabaña de William P. Young.","Te sugiero leer El libro de los abrazos de Eduardo Galeano, El hombre en el castillo de Philip K. Dick, y Los juegos del hambre de Suzanne Collins.","Aquí tienes algunas sugerencias: La sombra del viento de Carlos Ruiz Zafón, El nombre del viento de Patrick Rothfuss, y Circe de Madeline Miller.","Para una buena lectura, prueba La elegancia del erizo de Muriel Barbery, El jardín de las mariposas de Dot Hutchison, y La vida secreta de las abejas de Sue Monk Kidd.","Algunos libros recomendados son El hombre en busca de sentido de Viktor E. Frankl, La mujer en la ventana de A.J. Finn, y Los pilares de la tierra de Ken Follett.","Te sugiero leer El corazón helado de Almudena Grandes, El psicoanalista de John Katzenbach, y La guía del autoestopista galáctico de Douglas Adams.","Aquí tienes unas opciones: La caverna de José Saramago, Los siete maridos de Evelyn Hugo de Taylor Jenkins Reid, y El retrato de Dorian Gray de Oscar Wilde.","Para una lectura envolvente, considera El hombre que inventó la Navidad de Les Standiford, El túnel de Ernesto Sabato, y La vida secreta de las abejas de Sue Monk Kidd.","Algunas recomendaciones son El circo de la noche de Erin Morgenstern, El último deseo de Andrzej Sapkowski, y El día que se perdió la cordura de Javier Castillo."],
+            turísticos_recomendarías_en_ciudad:["En España, te recomendaría visitar la Sagrada Familia en Barcelona, el Museo del Prado en Madrid, y la Alhambra en Granada.","Si vas a Francia, no te pierdas la Torre Eiffel en París, el Museo del Louvre y la Catedral de Notre-Dame.","En Italia, visita el Coliseo en Roma, la Torre de Pisa y la Basílica de San Marcos en Venecia.","En Japón, puedes explorar el templo Senso-ji en Tokio, el Monte Fuji y el santuario Fushimi Inari en Kioto.","Si estás en Australia, te sugiero la Gran Barrera de Coral, la Ópera de Sídney y los Doce Apóstoles en Victoria.","En México, disfruta de las playas de Cancún, las ruinas de Teotihuacán y el Centro Histórico de Ciudad de México.","Si vas a Egipto, visita las Pirámides de Giza, el Museo Egipcio en El Cairo y el Valle de los Reyes en Luxor.","En Brasil, no te pierdas el Cristo Redentor en Río de Janeiro, el Amazonas y las Cataratas del Iguazú.","En Estados Unidos, te recomiendo el Gran Cañón en Arizona, la Estatua de la Libertad en Nueva York y el Parque Nacional Yellowstone.","Si estás en China, visita la Gran Muralla, la Ciudad Prohibida en Pekín y el Ejército de Terracota en Xi'an.","En Reino Unido, explora la Torre de Londres, el Museo Británico en Londres y el Castillo de Edimburgo en Escocia.","En Canadá, disfruta de las Cataratas del Niágara, el Parque Nacional Banff y la ciudad de Vancouver.","Si vas a Argentina, visita el Glaciar Perito Moreno en Patagonia, el barrio de La Boca en Buenos Aires y las Cataratas del Iguazú.","En India, te sugiero el Taj Mahal en Agra, el Fuerte Amber en Jaipur y el Qutub Minar en Delhi.","En Sudáfrica, no te pierdas el Parque Nacional Kruger, la Montaña de la Mesa en Ciudad del Cabo y los Jardines Botánicos de Kirstenbosch.",
+            "Si estás en Turquía, explora la Hagia Sofía en Estambul, la Capadocia y el Palacio de Topkapi.","En Grecia, visita la Acrópolis en Atenas, las Islas Griegas y el Santuario de Delfos.","En Portugal, te recomiendo la Torre de Belém en Lisboa, el Palacio de la Pena en Sintra y el puerto de Oporto.","Si vas a los Países Bajos, disfruta de los canales de Ámsterdam, el Museo Van Gogh y los campos de tulipanes en Keukenhof.","En Noruega, visita los fiordos noruegos, el Preikestolen y la ciudad de Bergen.","En Suecia, no te pierdas el Museo Vasa en Estocolmo, el Palacio Real y el archipiélago de Estocolmo.","Si estás en Dinamarca, explora el Tivoli Gardens en Copenhague, la Sirenita y el Palacio de Amalienborg.","En Finlandia, disfruta de la ciudad de Helsinki, el Parque Nacional de las Islas Åland y la Laponia finlandesa.","En Islandia, visita la Laguna Azul, el Círculo Dorado y las cascadas Gullfoss y Seljalandsfoss.","En Suiza, te recomiendo el Matterhorn, el Lago de Ginebra y la ciudad de Lucerna.","Si vas a Austria, explora la Ópera Estatal de Viena, el Palacio de Schönbrunn y la ciudad de Salzburgo.",
+            "En Hungría, disfruta del Parlamento en Budapest, el Balneario Széchenyi y el Castillo de Buda.","En Polonia, te sugiero el casco antiguo de Cracovia, el campo de concentración de Auschwitz y el Castillo Real de Varsovia.","Si estás en República Checa, visita el Castillo de Praga, el Puente de Carlos y la Plaza de la Ciudad Vieja.","En Eslovaquia, explora el Castillo de Bratislava, el Parque Nacional de los Tatras y el casco antiguo de Bratislava.","En Rumanía, no te pierdas el Castillo de Drácula en Bran, el casco antiguo de Sibiu y los Cárpatos.","En Bulgaria, te recomiendo el Monasterio de Rila, la ciudad de Plovdiv y la playa de Sunny Beach.","Si vas a Serbia, visita la Fortaleza de Belgrado, la Catedral de San Sava y el Parque Nacional Tara.","En Croacia, disfruta del casco antiguo de Dubrovnik, el Parque Nacional de los Lagos de Plitvice y Split.","En Montenegro, explora la Bahía de Kotor, el Parque Nacional Durmitor y la ciudad costera de Budva.","En Bosnia y Herzegovina, te sugiero el casco antiguo de Sarajevo, las Cascadas de Kravica y Mostar.","Si estás en Albania, visita el casco antiguo de Berat, la Riviera Albanesa y la ciudad de Shkodër.","En Grecia, no te pierdas las islas Santorini y Mykonos, el Templo de Zeus en Atenas y el Teatro de Epidauro.","En Malta, explora la Ciudad del Valletta, Mdina y las Islas de Gozo y Comino.","Si vas a Chipre, te recomiendo el casco antiguo de Nicosia, el puerto de Limassol y las playas de Ayia Napa.","En Arabia Saudita, visita la ciudad de Riad, la antigua ciudad de Al-Ula y las playas de Jeddah.","En los Emiratos Árabes Unidos, disfruta del Burj Khalifa en Dubái, la Mezquita Sheikh Zayed en Abu Dabi y el desierto de Al Marmoom.","En Qatar, te sugiero visitar el Museo de Arte Islámico en Doha, la Corniche y el desierto de Khor Al Adaid.","Si estás en Omán, explora el Fuerte de Nizwa, las montañas Hajar y las playas de Salalah.","En Bahréin, no te pierdas el Museo Nacional de Bahréin, la Gran Mezquita y el mercado de Manama.","En Jordania, visita Petra, el Mar Muerto y Wadi Rum.","En Israel, te recomiendo Jerusalén, Tel Aviv y el Mar Muerto.","Si vas a Líbano, explora Beirut, las ruinas de Baalbek y los Cedros del Líbano.","En Irán, visita Persépolis, la ciudad de Isfahan y la Mezquita Azul de Tabriz.","En Yemen, te sugiero explorar la ciudad vieja de Sana'a, la ciudadela de Shibam y Socotra."],
+            cambio_climático_y_cómo_afecta_al_planeta:["Definición básica: El cambio climático se refiere a las alteraciones a largo plazo en los patrones climáticos globales, principalmente debido a la actividad humana, como el aumento de las temperaturas y el cambio en los patrones de precipitación.","Causas principales: El cambio climático es causado en gran parte por las emisiones de gases de efecto invernadero, como el dióxido de carbono y el metano, que provienen de la quema de combustibles fósiles y la deforestación.","Efectos en el clima: Los efectos del cambio climático incluyen un aumento de las temperaturas globales, alteraciones en los patrones de lluvia, y una mayor frecuencia de eventos meteorológicos extremos, como huracanes y sequías.","Impacto en los océanos: El cambio climático está provocando el calentamiento de los océanos, el derretimiento de los glaciares y un aumento en el nivel del mar, lo que puede llevar a inundaciones costeras y la pérdida de hábitats marinos.","Efectos en los ecosistemas: El cambio climático está alterando los ecosistemas naturales, afectando a la biodiversidad y poniendo en peligro a muchas especies que no pueden adaptarse rápidamente a las nuevas condiciones.","Impacto en la agricultura: El cambio climático puede afectar los rendimientos agrícolas al alterar los ciclos de cultivo, aumentar el riesgo de plagas y enfermedades, y poner en peligro la seguridad alimentaria.","Salud humana: El cambio climático puede tener efectos negativos en la salud humana, como el aumento de enfermedades respiratorias debido a la contaminación del aire y el riesgo de enfermedades transmitidas por insectos.","Impacto en el agua: Los cambios en los patrones de precipitación provocados por el cambio climático pueden causar sequías en algunas regiones y inundaciones en otras, afectando la disponibilidad de agua potable.","Adaptación y mitigación: Para enfrentar el cambio climático, es necesario tanto adaptarse a sus efectos, preparando nuestras infraestructuras y comunidades, como mitigar sus causas reduciendo las emisiones de gases de efecto invernadero.","Acciones individuales: Cada persona puede contribuir a combatir el cambio climático reduciendo su consumo de energía, usando transporte sostenible, y apoyando políticas y prácticas ecológicas.",
+            "Impacto en la biodiversidad: Las alteraciones en los hábitats naturales debido al cambio climático pueden llevar a la extinción de muchas especies animales y vegetales que no pueden adaptarse o migrar a nuevos lugares.","Desastres naturales: El aumento de eventos climáticos extremos, como tormentas, inundaciones y sequías, está relacionado con el cambio climático, causando daños significativos a comunidades y economías.","Economía global: El cambio climático puede afectar negativamente a la economía global al dañar infraestructuras, reducir la productividad agrícola y aumentar los costos asociados con desastres naturales y la adaptación.","Desigualdad social: Los impactos del cambio climático tienden a afectar más gravemente a las comunidades vulnerables y de bajos ingresos, exacerbando las desigualdades sociales existentes.","Desglaciación: El calentamiento global está provocando la desglaciación de los casquetes polares y glaciares, contribuyendo al aumento del nivel del mar y afectando los ecosistemas árticos y antárticos.","Cambio en la fauna: El cambio climático puede forzar a algunas especies animales a migrar a nuevas áreas para sobrevivir, mientras que otras pueden enfrentar dificultades para adaptarse a los cambios en su hábitat.","Efectos en la agricultura: Los cambios en el clima pueden alterar la temporada de crecimiento de los cultivos y la disponibilidad de agua, lo cual puede impactar la producción agrícola global.","Contaminación del aire: El aumento de temperaturas puede intensificar la contaminación del aire, haciendo que las ciudades enfrenten mayores problemas de calidad del aire y salud pública.","Eventos climáticos extremos: El cambio climático está asociado con un aumento en la frecuencia e intensidad de eventos climáticos extremos, como huracanes más fuertes y olas de calor más prolongadas.","Preservación de los recursos naturales: La gestión sostenible de los recursos naturales y la reducción de la deforestación son cruciales para mitigar el impacto del cambio climático y preservar la biodiversidad.","Efectos en el ciclo del agua: Los cambios en las precipitaciones y la evaporación debido al cambio climático pueden afectar los ciclos del agua, lo que tiene implicaciones para el suministro de agua y la gestión de recursos hídricos.",
+            "Cambio en los patrones migratorios: Muchas especies animales están cambiando sus patrones migratorios en respuesta a los cambios en el clima, lo cual puede afectar los ecosistemas y la cadena alimentaria.","Pérdida de hábitats: La destrucción de hábitats naturales debido al cambio climático puede llevar a la pérdida de áreas de reproducción y alimentación esenciales para muchas especies.","Reducción de la biodiversidad: El cambio climático contribuye a la reducción de la biodiversidad al alterar los hábitats y las interacciones ecológicas, lo cual puede tener efectos en cadena en los ecosistemas.","Desigualdades regionales: Los impactos del cambio climático no se distribuyen de manera uniforme, y algunas regiones pueden enfrentar consecuencias más severas debido a su geografía y vulnerabilidad económica.","Agricultura sostenible: Adoptar prácticas agrícolas sostenibles puede ayudar a mitigar algunos de los efectos del cambio climático y asegurar la producción alimentaria para el futuro.","Cambio en el comportamiento de los animales: Los cambios en el clima pueden alterar el comportamiento de los animales, afectando sus patrones de alimentación, reproducción y migración.","Riesgos para la seguridad alimentaria: El cambio climático puede afectar la seguridad alimentaria global al alterar las condiciones para el cultivo de alimentos y aumentar el riesgo de pérdidas de cosechas.","Conservación del agua: La gestión eficiente del agua es esencial para adaptarse a los cambios en el clima y asegurar el suministro de agua para las generaciones futuras.","Efectos en la pesca: El cambio climático puede afectar los ecosistemas marinos, alterando las poblaciones de peces y la salud de los arrecifes de coral, lo que impacta la industria pesquera.","Responsabilidad global: El cambio climático es un problema global que requiere cooperación internacional para reducir las emisiones de gases de efecto invernadero y promover la sostenibilidad.","Innovación tecnológica: La inversión en tecnologías limpias y soluciones innovadoras puede desempeñar un papel importante en la mitigación del cambio climático y la adaptación a sus efectos.","Educación y concienciación: Informar y educar a las personas sobre el cambio climático es crucial para fomentar la acción y la toma de decisiones informadas en todos los niveles de la sociedad.",
+            "Impacto en los ecosistemas terrestres: Los cambios en el clima pueden afectar los ecosistemas terrestres, desde los bosques hasta los desiertos, alterando las condiciones para la vida vegetal y animal.","Protección de las comunidades costeras: La protección y restauración de los ecosistemas costeros, como los manglares y los arrecifes de coral, puede ayudar a mitigar el impacto del aumento del nivel del mar.","Acciones gubernamentales: Los gobiernos tienen un papel clave en la implementación de políticas y regulaciones para reducir las emisiones de gases de efecto invernadero y promover la adaptación al cambio climático.","Eficiencia energética: Mejorar la eficiencia energética en edificios, transporte e industria puede reducir significativamente las emisiones de gases de efecto invernadero y contribuir a la mitigación del cambio climático.","Preservación del suelo: La gestión sostenible del suelo es importante para mantener la salud del suelo y la capacidad de los ecosistemas para adaptarse a los cambios en el clima.","Efectos en la fauna marina: El cambio climático está afectando los ecosistemas marinos al alterar la temperatura del agua, la acidez y las corrientes oceánicas, lo que impacta a las especies marinas.","Compromiso personal: Cada individuo puede hacer una diferencia al adoptar hábitos sostenibles, reducir su huella de carbono y apoyar iniciativas que aborden el cambio climático."],
+            aprender_un_nuevo_idioma:["Método general: Para aprender un nuevo idioma, comienza por familiarizarte con los conceptos básicos y practicar regularmente. Usa libros, aplicaciones y clases para mejorar tus habilidades","Aplicaciones móviles: Utiliza aplicaciones móviles como Duolingo o Babbel para aprender un nuevo idioma. Estas apps te permiten practicar a tu propio ritmo y desde cualquier lugar.","Clases en línea: Inscríbete en clases en línea a través de plataformas como Coursera o Udemy. Estos cursos ofrecen una estructura y la posibilidad de interactuar con profesores y otros estudiantes.","Intercambio de idiomas: Participa en intercambios de idiomas con hablantes nativos. Esto te permitirá practicar conversación y mejorar tu fluidez mientras ayudas a otros a aprender tu lengua materna.","Estudiar gramática y vocabulario: Dedica tiempo a estudiar la gramática y el vocabulario del nuevo idioma. Usa libros de texto y recursos en línea para fortalecer tus conocimientos.","Inmersión total: Sumérgete en el idioma rodeándote de él tanto como sea posible. Escucha música, mira películas y series en el idioma objetivo para mejorar tu comprensión auditiva.","Lectura: Lee libros, artículos y periódicos en el nuevo idioma para expandir tu vocabulario y mejorar tu comprensión de la estructura del lenguaje.","Práctica diaria: Practica el idioma todos los días, aunque sea solo por unos minutos. La consistencia es clave para hacer progresos y mantener lo que has aprendido.","Uso de flashcards: Utiliza tarjetas de memoria (flashcards) para memorizar vocabulario y frases clave. Aplicaciones como Anki pueden ayudarte a revisar y retener nueva información.","Conversaciones con nativos: Habla con hablantes nativos para perfeccionar tu pronunciación y entender mejor los matices del idioma. Busca oportunidades para practicar con personas de habla nativa.","Tener un compañero de estudio: Encuentra a alguien con quien estudiar el idioma. Tener un compañero puede hacer el proceso más dinámico y motivador.","Unirse a grupos de estudio: Participa en grupos de estudio o clubes de conversación para tener un entorno social donde practicar el idioma y compartir estrategias de aprendizaje.","Usar recursos en línea: Aprovecha recursos en línea como foros, videos y podcasts en el idioma que estás aprendiendo para exponerte a diferentes aspectos del lenguaje.",
+            "Hacer ejercicios de escritura: Escribe en el nuevo idioma para mejorar tu habilidad para estructurar oraciones y usar el vocabulario correctamente. Intenta escribir diarios o ensayos.","Aplicaciones de pronunciación: Utiliza aplicaciones que te ayuden a mejorar tu pronunciación, como Rosetta Stone, que ofrecen ejercicios de pronunciación y reconocimiento de voz.","Viajar al país: Si tienes la oportunidad, viaja al país donde se habla el idioma. Esto te permitirá practicar en contextos reales y vivir una inmersión total.","Escuchar y repetir: Escucha audios o videos en el nuevo idioma y repite lo que escuchas. Esto ayuda a mejorar tu acento y fluidez al internalizar la pronunciación correcta.","Juegos y actividades: Incorpora juegos y actividades en tu aprendizaje para hacerlo más divertido y motivador. Juegos de palabras y ejercicios interactivos son útiles.","Establecer metas: Establece metas claras y alcanzables para tu aprendizaje, como aprender un número determinado de palabras al mes o mantener una conversación durante 10 minutos.","Ver series y películas con subtítulos: Mira series y películas en el idioma que estás aprendiendo. Usa subtítulos en tu idioma nativo al principio y luego en el idioma objetivo para mejorar tu comprensión.","Tener una rutina de estudio: Crea una rutina de estudio regular que incluya diferentes actividades como lectura, escritura, conversación y escucha para abordar todos los aspectos del aprendizaje.","Aprender frases útiles: Enfócate en aprender frases y expresiones útiles que puedas usar en situaciones cotidianas. Esto te ayudará a comunicarte más efectivamente desde el principio.","Práctica con ejercicios interactivos: Utiliza ejercicios interactivos en línea para practicar la gramática y el vocabulario de manera divertida y efectiva.","Escuchar música en el idioma: Escucha música en el idioma que estás aprendiendo para exponerte a nuevos vocabularios y estructuras, y acostumbrarte a los sonidos del idioma.","Estudiar con videos educativos: Busca videos educativos en plataformas como YouTube que se centren en el idioma que estás aprendiendo. Muchos ofrecen lecciones estructuradas y consejos útiles.","Aprovechar la tecnología: Usa herramientas tecnológicas como traductores automáticos y chatbots para practicar el idioma y resolver dudas rápidamente durante tu aprendizaje."],
+            pregunta1:[],
+            pregunta2:[],
+            pregunta3:[],
+            pregunta4:[],
+            pregunta5:[],
+            pregunta6:[],
+            pregunta7:[],
+            pregunta8:[],
+            pregunta9:[],
+            pregunta10:[],
+            pregunta11:[],
+            pregunta12:[],
+            pregunta13:[],
+            pregunta14:[],
+            pregunta15:[],
+            pregunta16:[],
+            pregunta17:[],
+            pregunta18:[],
+            pregunta19:[],
+            pregunta20:[],
+            pregunta21:[],
+            pregunta22:[],
+            pregunta23:[],
+            pregunta24:[],
+            pregunta25:[],
+            pregunta26:[],
+            pregunta27:[],
+            pregunta28:[],
+            pregunta29:[],
+            pregunta21:[],
+            pregunta22:[],
+            pregunta23:[],
+            pregunta24:[],
+            pregunta25:[],
+            pregunta26:[],
+            pregunta27:[],
+            pregunta28:[],
+            pregunta29:[],
+            pregunta30:[],
+            pregunta31:[],
+
         };
         this.learnedResponses = {};
+        this.context = {}; // Para mantener el contexto de la conversación
+        this.lastIntent = null; // Para recordar la última intención detectada
     }
 
     getRandomResponse(key) {
         const responses = this.responses[key];
         return responses[Math.floor(Math.random() * responses.length)];
     }
+    getRandomTitulo(key) {
+        const titulo = this.titulo[key];
+        if (titulo) {
+            return titulo[Math.floor(Math.random() * titulo.length)];
+        }
+        return "No title found.";
+    }
+
+    getRandomDescripcion(key) {
+        const descripcion = this.descripcion[key];
+        if (descripcion) {
+            return descripcion[Math.floor(Math.random() * descripcion.length)];
+        }
+        return "No description found.";
+    }
+
+    getRandomTitulo1(key) {
+        const titulo1 = this.titulo1[key];
+        if (titulo1) {
+            return titulo1[Math.floor(Math.random() * titulo1.length)];
+        }
+        return "No title1 found.";
+    }
+
+    getRandomDescripcion1(key) {
+        const descripcion1 = this.descripcion1[key];
+        if (descripcion1) {
+            return descripcion1[Math.floor(Math.random() * descripcion1.length)];
+        }
+        return "No description1 found.";
+    }
+
+
+
+
     getCurrentTimeInBolivia() {
         const now = new Date();
         // Obtiene la hora en UTC
@@ -88,58 +198,145 @@ class Chatbot {
         }
     }
 
+
+
     processInput(input) {
         const cleanedInput = input.toLowerCase().trim();
         const responseMap = {
-            "hola": "greetings", "hola chat": "greetings", "hola chat.rcl": "greetings", "hola chat.rcl-limber": "greetings",
-
+            "hola":"greetings" , "hola chat":"greetings", "hola chat.rcl":"greetings", "hola chat.rcl-limber":"greetings",
             "hola necesito ayuda":"saludo_ayuda", "necesito ayuda":"saludo_ayuda",
-
             "me puedes ayudar":"ayuda1",
-"adiós": "farewell", "adios": "farewell", "a dios": "farewell", 
-            "hasta luego": "farewell", "chau": "farewell", 
-            "me boy": "farewell", "me boy": "farewell",
+            "adiós":"farewell", "adios":"farewell", "a dios":"farewell", //
+            "hasta luego":"farewell", "chau":"farewell", //
+            "me boy":"farewell", "me boy":"farewell",//
+            "gracias":"thanks",
+            "si":"si",
+            "con quien hablo":"limber2", "¿con quien hablo?":"limber2", "¿con quién hablo?":"limber2",
+            "bien":"bien",
+            "mal":"mal",
+            "como estas":"como_estas", "como estás":"como_estas", "¿como estas?":"como_estas", "¿como estás?":"como_estas",
+            "donde vives":"informacion_personal", "donde estas":"informacion_personal", "cuantos años tienes":"informacion_personal",//
+            "aburrido":"aburrido",
+            "no tengo tiempo":"no",
+            "ok":"okey", "okey":"okey",
+            "juegos":"juego",
+            "musica":"musica",
+            "quiero escuchar musica":"musica2",
+            "que entiendes":"que_entiendes", "que entiendes?":"que_entiendes",
+            "que hora es":"hora","que hora es?":"hora","hora":"hora", // Añadido para la pregunta de la hora
+            "que fecha es":"fecha","que fecha es?":"fecha",
+            "que año es":"año","que año es?":"año",
+            "que mes es":"mes","que mes es?":"mes",
+            "que dia es":"dia","que dia es?":"dia",
 
-            "gracias": "thanks",
+            "dónde puedo encontrar información sobre tema específico": "tema_especifico",
+            "cómo puedo mejorar mi productividad":"mejorar_mi_productividad","cómo puedo mejorar mi productividad":"mejorar_mi_productividad",
+            "qué es la inteligencia artificial":"inteligencia_artificial","qué es la inteligencia artificial":"inteligencia_artificial",
+            "qué significa [palabra o término]":"qué_significa_palabra_o_término",
+            "cómo se hace [receta o plato específico]":"receta_o_plato_específico",//falta
+            "qué recomendaciones de libros tienes":"recomendaciones_de_libros",
+            "qué lugares turísticos recomendarías en [ciudad o país]":"turísticos_recomendarías_en_ciudad",
+            "qué es el cambio climático y cómo afecta al planeta":"cambio_climático_y_cómo_afecta_al_planeta",
+            "cómo puedo aprender un nuevo idioma":"aprender_un_nuevo_idioma",
+            "cuál es la historia detrás de [evento o figura histórica]":"pregunta1",
+            "qué opinas sobre [tema controversial]":"",
+            "cómo puedo manejar el estrés y la ansiedad":"",
+            "cuáles son las mejores aplicaciones para [uso específico]":"",
+            "qué consejos tienes para mejorar mis habilidades de escritura":"",
+            "qué ejercicios de fitness son efectivos para [objetivo específico]":"",
+            "cuál es el significado de [sueño o símbolo]":"",
+            "cómo funciona el sistema de salud en [país]":"",
+            "qué tendencias actuales hay en la tecnología":"",
+            "cómo puedo empezar a invertir en la bolsa":"",
+            "cómo puedo mejorar mis habilidades de comunicación":"",
+            "cuáles son los beneficios de una dieta equilibrada":"",
+            "cómo se resuelve [problema matemático o científico]":"",
+            "qué medidas puedo tomar para proteger mi privacidad en línea":"",
+            "cuáles son las mejores estrategias para estudiar de manera efectiva":"",
+            "qué lugares son ideales para unas vacaciones relajantes":"",
+            "cómo puedo crear un presupuesto personal":"",
+            "qué es la criptomoneda y cómo funciona":"",
+            "cuáles son las últimas noticias en [industria o campo específico]":"",
+            "qué consejos tienes para una vida saludable":"",
+            "cómo puedo desarrollar una rutina de ejercicio efectiva":"",
+            "qué es el aprendizaje automático y cómo se aplica":"",
+            "cómo puedo escribir una carta de presentación efectiva":"",
+            "qué habilidades son valiosas en el mercado laboral actual":"",
+            "qué tendencias están marcando la moda este año":"",
+            "qué estrategias de marketing digital son más efectivas":"",
+            "qué es el machine learning y cómo se utiliza":"",
+            "cómo puedo aprender a programar":"",
+            "cómo puedo superar el bloqueo creativo":"",
+            "cuáles son los beneficios de la meditación":"",
+            "cómo se lleva a cabo una investigación académica":"",
+            "qué consejos tienes para mantener un equilibrio entre el trabajo y la vida personal":"",
+            "cuáles son las mejores prácticas para el cuidado de la piel":"",
+            "qué es el internet de las cosas (IoT)":"",
+            "qué es el desarrollo sostenible y por qué es importante":"",
+            "cómo puedo mejorar mi inglés hablado":"",
+            "cómo se realiza una buena presentación en público":"",
+            "cuáles son las mejores maneras de ahorrar dinero":"",
+            "cuáles son las principales diferencias entre los sistemas operativos [nombre de sistemas]":"",
+            "qué es el análisis de datos y cómo se aplica en los negocios":"",
+            "cómo puedo aumentar mi confianza en mí mismo":"",
+            "qué consejos tienes para escribir una novela":"",
+            "cuáles son las últimas innovaciones en la medicina":"",
+            "qué estrategias son efectivas para la gestión del tiempo":"",
+            "qué es el blockchain y cómo se utiliza":"",
+            "cómo puedo hacer networking de manera efectiva":"",
+            "qué es el cambio organizacional y cómo se gestiona":"",
+            "cuáles son las mejores maneras de preparar una entrevista de trabajo":"",
+            "qué tendencias están influyendo en el diseño gráfico":"",
+            "cómo se lleva a cabo un análisis FODA":"",
+            "qué es el diseño UX/UI y por qué es importante":"",
+            "cómo puedo mejorar mis habilidades de liderazgo":"",
+            "cómo se maneja el conflicto en un equipo de trabajo":"",
+            "cuáles son los beneficios de hacer voluntariado":"",
+            "cuáles son las mejores técnicas para la toma de decisiones":"",
+            "qué es la realidad aumentada y cómo se usa":"",
+            "qué es el pensamiento crítico y cómo se puede mejorar":"",
+            "cómo puedo desarrollar una mentalidad de crecimiento":"",
+            "cómo puedo hacer una investigación de mercado efectiva":"",
+            "cuáles son las mejores prácticas para el desarrollo personal":"",
+            "cuáles son los principios básicos de la gestión de proyectos":"",
+            "cómo puedo mejorar mi bienestar emocional":"",
+            "qué es la inteligencia emocional y cómo se aplica en el trabajo":"",
+            "cuáles son las últimas tendencias en el entretenimiento":"",
+            "cómo se realiza una evaluación de riesgos":"",
+            "qué es la automatización y cómo está cambiando los negocios":"",
+            "cómo puedo crear un plan de negocios sólido":"",
+            "qué es el análisis de competitividad y cómo se lleva a cabo":"",
+            "cuáles son las mejores técnicas para el aprendizaje autodidacta":"",
+            "cómo se lleva a cabo una auditoría financiera":"",
+            "qué es el marketing de contenido y por qué es importante":"",
+            "cómo puedo crear un portafolio profesional efectivo":"",
+            "qué es el pensamiento sistémico y cómo se aplica":"",
+            "cuáles son las estrategias para manejar el cambio en el trabajo":"",
+            "cómo se realiza una evaluación de desempeño efectiva":"",
+            "qué es la ciberseguridad y cómo protegerse de amenazas":"",
+            "cuáles son las mejores formas de motivarse para alcanzar metas":"",
+            "cómo puedo mejorar mi capacidad de resolución de problemas":"",
+            "qué es el diseño de producto y cómo se desarrolla":"",
+            "cuáles son los desafíos actuales en el sector [nombre del sector]":"",
+            "cómo se lleva a cabo una planificación estratégica efectiva":"",
+            "qué es la sostenibilidad y cómo puede ser aplicada en los negocios":"",
+            "cuáles son las mejores prácticas para el trabajo en equipo":"",
+            "qué es la economía circular y por qué es relevante":"",
 
-            "si": "si",
-
-            "con quien hablo": "limber2", "¿con quien hablo?": "limber2", "¿con quién hablo?": "limber2",
-
-            "bien": "bien",
-
-            "mal": "mal",
-
-            "como estas": "como_estas", "como estás": "como_estas", "¿como estas?": "como_estas", "¿como estás?": "como_estas",
-
-            "donde vives": "informacion_personal", "donde estas": "informacion_personal", "cuantos años tienes": "informacion_personal",//
-
-            "aburrido": "aburrido",
-
-            "no tengo tiempo": "no",
-
-            "ok": "okey", "okey": "okey",
-
-            "que juego me recomiendas": "juego",
-
-            "musica": "musica",
-
-            "quiero escuchar musica": "musica2",
-
-            "que entiendes" : "que_entiendes", "que entiendes?" : "que_entiendes",
-
-            "que hora es": "hora",  // Añadido para la pregunta de la hora
-
-            "que fecha es": "fecha", "que fecha es hoy": "fecha", "que fecha es en mi pais": "fecha", "que fecha es en bolivia": "fecha", "que fecha es el pais bolivia": "fecha", "que fecha es": "fecha", "disculpe que fecha es": "fecha", "disculpe que fecha es hoy": "fecha", "disculpe que fecha es hoy en bilivia": "fecha", "disculpe me podria decir la fecha de hoy": "fecha", "disculpe me podria decir la fecha": "fecha", "disculpe me podria decir la fecha de bolivia": "fecha", "digame la fecha": "fecha", "digame la fecha de hoy": "fecha", "digame la fecha hoy en bolivia": "fecha", "me podria decir la fecha": "fecha", "me podria decir la fecha de hoy": "fecha",
-
-            "que año es": "año", "en que año estamos": "año", "que año es en mi pais": "año", "que año es en bolivia": "año", "año actual": "año", "el año actual": "año", "el año actual en bolivia": "año", "me podria decir el año": "año", "me podria decir el año por favor": "año", "me podria decir el año porfavor": "año", "digame el año": "año", "digame el año en el que estamos": "año", "digame que año estamos": "año", 
-
-            "que mes es": "mes", "en que mes estamos": "mes", "disculpe en que mes estamos": "mes", "digame el mes": "mes", "digame el mes en el que estamos": "mes",
-
-            "que dia es": "dia", "que dia es hoy": "dia", "digame el dia": "dia", "digame el dia en el que estamos": "dia",
-
-            "mejor jugador": "mejor_jugador", "quien es el mejor jugador": "mejor_jugador", "quien es el mejor jugador": "mejor_jugador",
         };
+        const tituloMap = {
+            "hol": "tit"
+        };
+        const descripcionMap = {
+            "hol2": "des"
+        };
+        const titulo1Map = {
+            "how": "tit1"
+        };
+        const descripcion1Map = {
+            "good": "tit1"
+        };
+
         // Evaluar expresiones matemáticas simples
         const mathExpressionPattern = /^[0-9+\-*/().\s]+$/;
         if (mathExpressionPattern.test(cleanedInput)) {
@@ -164,22 +361,52 @@ class Chatbot {
                 return this.responses['dia'][0] + this.getCurrentDayInBolivia();
             }
             return this.getRandomResponse(responseKey);
-        }
-
+        }    
+        // Process responses
         for (const [phrase, responseKey] of Object.entries(responseMap)) {
             if (cleanedInput.includes(phrase)) {
                 return this.getRandomResponse(responseKey);
             }
         }
-    
+
+        // Process titles
+        for (const [phrase, tituloKey] of Object.entries(tituloMap)) {
+            if (cleanedInput.includes(phrase)) {
+                return this.getRandomTitulo(tituloKey);
+            }
+        }
+
+        // Process descriptions
+        for (const [phrase, descripcionKey] of Object.entries(descripcionMap)) {
+            if (cleanedInput.includes(phrase)) {
+                return this.getRandomDescripcion(descripcionKey);
+            }
+        }
+
+        // Process titulo1
+        for (const [phrase, titulo1Key] of Object.entries(titulo1Map)) {
+            if (cleanedInput.includes(phrase)) {
+                return this.getRandomTitulo1(titulo1Key);
+            }
+        }
+
+        // Process descripcion1
+        for (const [phrase, descripcion1Key] of Object.entries(descripcion1Map)) {
+            if (cleanedInput.includes(phrase)) {
+                return this.getRandomDescripcion1(descripcion1Key);
+            }
+        }
+
         this.learnFromInput(cleanedInput);
         return this.getRandomResponse("fallback");
+
     }
     
     learnFromInput(input) {
         this.learnedResponses[input] = ["Lo siento, no tengo una respuesta para eso."];
     }    
 }
+// Crear una instancia del chatbot
 const chatbot = new Chatbot();
 
 function sendMessage() {
